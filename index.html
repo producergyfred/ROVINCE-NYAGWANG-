@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ============================================================
+       SEO  (EDIT: replace YOUR-WEBSITE-URL-HERE with your real address
+       once the site is published, e.g. https://rovincenyagwang.netlify.app)
+       ============================================================ -->
+  <title>Rovince Nyagwang | Luo Gospel Artist</title>
+  <meta name="description" content="Official website of Rovince Nyagwang, Luo gospel artist. Listen to music, watch music videos, view photos and send a booking inquiry for your church or event.">
+  <meta name="theme-color" content="#080808">
+  <link rel="canonical" href="https://YOUR-WEBSITE-URL-HERE/">
+
+  <!-- Open Graph (link previews on Facebook, WhatsApp, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rovince Nyagwang | Luo Gospel Artist">
+  <meta property="og:description" content="Music, faith and inspiration. Listen, watch and book Rovince Nyagwang.">
+  <meta property="og:url" content="https://YOUR-WEBSITE-URL-HERE/">
+  <!-- EDIT: paste a direct ImgBB image link (must start with https://i.ibb.co/) -->
+  <meta property="og:image" content="PASTE_IMGBB_SHARE_IMAGE_URL_HERE">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon (replace favicon.png with your own square image if you like) -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <!-- Fonts: Cormorant Garamond (headings) + Jost (text). Safe fallbacks are in style.css,
+       so you may delete these three lines if you prefer zero external requests. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===================== A. HEADER & NAVIGATION ===================== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Rovince Nyagwang, back to top">
+        <!-- Logo image is filled from artistImages.logo in script.js (stays hidden until you add one) -->
+        <img id="brandLogo" class="brand-logo" alt="Rovince Nyagwang logo" width="44" height="44" hidden>
+        <span class="brand-name">Rovince Nyagwang</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primaryNav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#music">Music</a></li>
+          <li><a href="#videos">Videos</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn-gold nav-book" href="#booking">Book the Artist</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <noscript>
+      <p class="noscript-note">Please turn on JavaScript to see the music, videos and photo gallery on this website.</p>
+    </noscript>
+
+    <!-- ===================== B. HERO ===================== -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <!-- Optional wide banner: artistImages.header -->
+      <div class="hero-banner" id="heroBanner" aria-hidden="true"></div>
+      <!-- Main artist photograph: artistImages.hero -->
+      <img id="heroImage" class="hero-photo" alt="Portrait of Rovince Nyagwang, Luo gospel artist" fetchpriority="high" decoding="async">
+      <div class="hero-shade" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        <h1 id="hero-title"><span>Rovince</span> <span>Nyagwang</span></h1>
+        <p class="hero-sub">Luo Gospel Artist | Music, Faith &amp; Inspiration</p>
+        <!-- EDIT: welcome message -->
+        <p class="hero-msg">Welcome. Listen, watch and be encouraged by gospel music that celebrates faith, hope and Luo heritage.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#music">Explore My Music</a>
+          <a class="btn btn-outline" href="#videos">Watch Videos</a>
+        </div>
+        <ul class="social-row" data-social aria-label="Social media"></ul>
+      </div>
+    </section>
+
+    <!-- ===================== C. BIOGRAPHY ===================== -->
+    <section id="about" class="section section--dark" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <figure class="about-photo">
+          <!-- artistImages.biography -->
+          <img id="bioImage" alt="Rovince Nyagwang smiling, photographed for his biography" loading="lazy" decoding="async" width="800" height="1000">
+        </figure>
+
+        <div class="about-text">
+          <h2 id="about-title">About Rovince Nyagwang</h2>
+
+          <!-- EDIT: replace every paragraph marked [Placeholder] with verified information.
+               Do not add awards, albums or achievements unless they are true and can be verified. -->
+          <p><span class="ph">[Placeholder]</span> Rovince Nyagwang is a Luo gospel artist. Replace this paragraph with the story of his background and musical journey: where he grew up, when he began to sing and what first drew him to gospel music.</p>
+          <p><span class="ph">[Placeholder]</span> Describe his passion for gospel music here: what he hopes people feel when they hear his songs and why he writes and sings them.</p>
+
+          <div id="bioMore" hidden>
+            <p><span class="ph">[Placeholder]</span> Describe his Luo cultural identity and how the language, rhythms and traditions of the Luo community shape his music.</p>
+            <p><span class="ph">[Placeholder]</span> Describe his faith, ministry and musical mission: the message he wants to share and the people he hopes to serve.</p>
+            <p><span class="ph">[Placeholder]</span> Achievements and impact. Only add details you can verify, such as released songs, events or churches served. Leave this out if there is nothing to confirm yet.</p>
+          </div>
+
+          <button id="bioToggle" class="btn btn-outline btn-small" type="button" aria-expanded="false" aria-controls="bioMore">Read more</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== D. MUSIC ===================== -->
+    <section id="music" class="section" aria-labelledby="music-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="music-title">My Music</h2>
+          <p>New and favourite songs. Pick a song and press Listen Now to hear it.</p>
+        </div>
+        <!-- Cards are built from the "songs" list in script.js -->
+        <div id="songGrid" class="card-grid card-grid--songs"></div>
+      </div>
+    </section>
+
+    <!-- ===================== E. VIDEOS ===================== -->
+    <section id="videos" class="section section--dark" aria-labelledby="videos-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="videos-title">Watch My Videos</h2>
+          <p>Press play to watch right here, or open any video on YouTube.</p>
+        </div>
+        <!-- Cards are built from "artistVideos" in script.js -->
+        <div id="videoGrid" class="card-grid card-grid--videos"></div>
+        <div class="section-cta">
+          <a id="channelBtn" class="btn btn-gold" href="#" target="_blank" rel="noopener noreferrer">Visit My YouTube Channel</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== F. GALLERY ===================== -->
+    <section id="gallery" class="section" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="gallery-title">Photo Gallery</h2>
+          <p>Portraits, live performances, church and gospel events, and behind the scenes. Select a photo to enlarge it.</p>
+        </div>
+        <!-- Built from artistImages.gallery in script.js -->
+        <div id="galleryGrid" class="gallery"></div>
+      </div>
+    </section>
+
+    <!-- ===================== G. CONTACT ===================== -->
+    <section id="contact" class="section section--dark" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="contact-title">Get in Touch</h2>
+          <p>Call, message or write to Rovince directly, or follow along on social media.</p>
+        </div>
+        <!-- Built from artistLinks in script.js -->
+        <ul id="contactList" class="contact-list"></ul>
+        <ul class="social-row social-row--large" data-social aria-label="Social media"></ul>
+      </div>
+    </section>
+
+    <!-- ===================== H. BOOKING ===================== -->
+    <section id="booking" class="section" aria-labelledby="booking-title">
+      <div class="container booking-grid">
+        <div class="booking-intro">
+          <h2 id="booking-title">Book Rovince Nyagwang</h2>
+          <p>Invite Rovince to minister at your church service, gospel concert, conference or special event. Share the details of your event in the form.</p>
+          <p class="booking-help">It helps to include the event date, venue, expected audience and the kind of ministry you have in mind.</p>
+          <button id="whatsappBookBtn" class="btn btn-outline" type="button">
+            <span class="btn-icon" id="waBtnIcon" aria-hidden="true"></span>
+            Book on WhatsApp
+          </button>
+        </div>
+
+        <form id="bookingForm" class="booking-form" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="fullName">Full name <span class="req" aria-hidden="true">*</span></label>
+              <input id="fullName" name="fullName" type="text" autocomplete="name" required aria-describedby="fullName-error">
+              <p class="field-error" id="fullName-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="organization">Organization, church or event name <span class="req" aria-hidden="true">*</span></label>
+              <input id="organization" name="organization" type="text" autocomplete="organization" required aria-describedby="organization-error">
+              <p class="field-error" id="organization-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="email">Email address <span class="req" aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="email-error">
+              <p class="field-error" id="email-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone number <span class="optional">(optional)</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="phone-error">
+              <p class="field-error" id="phone-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="eventType">Event type <span class="req" aria-hidden="true">*</span></label>
+              <select id="eventType" name="eventType" required aria-describedby="eventType-error">
+                <option value="">Select an event type</option>
+                <option>Church service</option>
+                <option>Gospel concert</option>
+                <option>Conference or convention</option>
+                <option>Crusade or revival</option>
+                <option>Wedding</option>
+                <option>Community event</option>
+                <option>Other</option>
+              </select>
+              <p class="field-error" id="eventType-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="eventDate">Event date <span class="req" aria-hidden="true">*</span></label>
+              <input id="eventDate" name="eventDate" type="date" required aria-describedby="eventDate-error">
+              <p class="field-error" id="eventDate-error"></p>
+            </div>
+
+            <div class="field field--wide">
+              <label for="eventLocation">Event location <span class="req" aria-hidden="true">*</span></label>
+              <input id="eventLocation" name="eventLocation" type="text" autocomplete="off" placeholder="Venue, town or city" required aria-describedby="eventLocation-error">
+              <p class="field-error" id="eventLocation-error"></p>
+            </div>
+
+            <div class="field field--wide">
+              <label for="message">Additional message or event details <span class="optional">(optional)</span></label>
+              <textarea id="message" name="message" rows="5" maxlength="1500" aria-describedby="message-error"></textarea>
+              <p class="field-error" id="message-error"></p>
+            </div>
+
+            <!-- Spam trap: real visitors never see or fill this in -->
+            <div class="hp" aria-hidden="true">
+              <label>Leave this field empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button id="submitBtn" class="btn btn-gold" type="submit">Send Booking Inquiry</button>
+            <p class="form-note"><span class="req" aria-hidden="true">*</span> Required fields</p>
+          </div>
+
+          <div id="formStatus" class="form-status" role="status" aria-live="polite" tabindex="-1" hidden></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== I. FOOTER ===================== -->
+  <footer class="site-footer">
+    <!-- Optional footer photo: artistImages.footer -->
+    <div class="footer-bg" id="footerBg" aria-hidden="true"></div>
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <p class="footer-name">Rovince Nyagwang</p>
+        <!-- EDIT: ministry statement -->
+        <p>Sharing faith, hope and encouragement through Luo gospel music.</p>
+        <ul class="social-row" data-social aria-label="Social media"></ul>
+      </div>
+
+      <nav aria-label="Footer">
+        <p class="footer-title">Quick links</p>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#music">Music</a></li>
+          <li><a href="#videos">Videos</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <p class="footer-title">Invite Rovince</p>
+        <p>Planning a service, concert or conference?</p>
+        <a class="btn btn-gold btn-small" href="#booking">Book the Artist</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="year">2026</span> Rovince Nyagwang. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== PHOTO LIGHTBOX ===================== -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+    <button class="lb-btn lb-close" type="button" aria-label="Close photo viewer">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <button class="lb-btn lb-prev" type="button" aria-label="Previous photo">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <figure class="lb-figure">
+      <img id="lbImage" alt="">
+      <figcaption id="lbCaption"></figcaption>
+    </figure>
+    <button class="lb-btn lb-next" type="button" aria-label="Next photo">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
