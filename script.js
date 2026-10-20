@@ -21,21 +21,33 @@
    Anything still showing "PASTE_..." displays a neutral placeholder.
    --------------------------------------------------------------------- */
 const artistImages = {
-  logo:      "https://i.ibb.co/mCvm1FdS/RN-logo.png",          // small square logo shown in the menu (optional)
-  header:    "",  // wide banner behind the hero text (optional)
-  hero:      "https://i.ibb.co/sd5RtL3q/nyagwang.png",    // main portrait at the top of the page
-  biography: "https://i.ibb.co/m5snYp1c/Polished-Studio-Portrait-with-Red-Tie.png",     // photo beside the biography
-  footer:    "https://i.ibb.co/mCvm1FdS/RN-logo.png",  // faint background image in the footer (optional)
+  logo: "https://i.ibb.co/mCvm1FdS/RN-logo.png",
 
-  // Gallery photos. Add or remove lines freely (8 look best).
+  // Optional banner; the hero slideshow does not need this.
+  header: "https://i.ibb.co/mCvm1FdS/RN-logo.png",
+
+  // Six rotating hero images, in display order.
+  hero: [
+    "https://i.ibb.co/sd5RtL3q/nyagwang.png",
+    "https://i.ibb.co/bMWJtWzL/rovince.png",
+    "https://i.ibb.co/Mx2Jhdf5/genona-img.jpg",
+    "https://i.ibb.co/5XRpm1M1/rovince-2.png",
+    "https://i.ibb.co/XxjV5sDx/nyagwang-2-with-RN-Logo.png"
+  ],
+
+  biography:
+    "https://i.ibb.co/wtFT1Td/Rovince.jpg",
+
+  footer: "https://i.ibb.co/mCvm1FdS/RN-logo.png",
+
+  // Existing gallery remains unchanged.
   gallery: [
     "https://i.ibb.co/Z1mjZtcH/Focused-Music-Studio-Workspace.png",
-    "PASTE_IMGBB_GALLERY_IMAGE_2_URL_HERE",
-    "PASTE_IMGBB_GALLERY_IMAGE_3_URL_HERE",
-    "PASTE_IMGBB_GALLERY_IMAGE_4_URL_HERE",
-    "PASTE_IMGBB_GALLERY_IMAGE_5_URL_HERE",
-    "PASTE_IMGBB_GALLERY_IMAGE_6_URL_HERE",
-    "PASTE_IMGBB_GALLERY_IMAGE_7_URL_HERE",
+    "https://i.ibb.co/5XRpm1M1/rovince-2.png",
+    "https://i.ibb.co/My2gMwBt/rovince-o.png",
+    "https://i.ibb.co/Psq783fk/rovince.jpg",
+    "https://i.ibb.co/nM0N8rZB/Rovince.jpg",
+    "https://i.ibb.co/BV6QqJyJ/Nyagwang.jpg",
     "https://i.ibb.co/23dnFLz3/Whats-App-Image-2026-10-17-at-16-55-11-2.jpg"
   ]
 };
@@ -76,46 +88,48 @@ const artistVideos = [
   },
   {
     title: "Dunia ",
-    description: "Swahili phrase meaning The world isn't safe.",
+    description: "Swahili word meaning  world.",
     videoId: "yGR_ZFg1jLc",
     thumbnail: "PASTE_IMGBB_THUMBNAIL_URL_HERE"
   },
   {
     title: "Nind Gi kwee",
     description: "Tribute to the late Raila Amollo Odinga",
-    videoId: "YuCUJEThwb",
+    videoId: "YuCUJEThwbo",
     thumbnail: "https://i.ibb.co/TD40pwSr/rovy.jpg"
   }
 ];
 
+
 /* ---------------------------------------------------------------------
-   1C. SONGS (the "My Music" cards)
-   cover = ImgBB image link for the cover art
-   url   = link to the song on YouTube or a streaming service (full https:// link)
-   audio = optional direct link to an audio file you own (leave "" if none)
-   Add or remove { ... }, blocks freely.
+   1C. SONGS (My Music cards)
+   cover = image URL for the song cover
+   url   = YouTube EMBED URL (plays without leaving your website)
+   audio = direct MP3 URL (optional; preferred for your own audio player)
    --------------------------------------------------------------------- */
+
+
 const songs = [
   {
-    title: "Ngima To Tek ",
+    title: "Ngima To Tek",
     year: "2023",
-    description: "Add a short description of this song here.",
+    description: "Life isn't easy, But God's Plan matters.",
     cover: "https://i.ibb.co/mCvm1FdS/RN-logo.png",
-    url: "PASTE_YOUTUBE_OR_STREAMING_LINK_HERE",
+    url: "https://www.youtube.com/embed/SN7uVF4XumA",
     audio: ""
   },
   {
     title: "Genona",
     year: "2024",
-    description: "Add a short description of this song here.",
+    description: "My only hopes is God'.",
     cover: "https://i.ibb.co/mCvm1FdS/RN-logo.png",
-    url: "GJ0jz36-8Gg",
+    url: "https://www.youtube.com/embed/GJ0jz36-8Gg",
     audio: ""
   },
-   {
-    title: "Nind Gik kwee",
+  {
+    title: "Nind Gi Kwee",
     year: "2025",
-    description: "Tribute.",
+    description: "Tribute to the late Raila Amollo Odinga.",
     cover: "https://i.ibb.co/mCvm1FdS/RN-logo.png",
     url: "https://www.youtube.com/embed/YuCUJEThwbo",
     audio: ""
@@ -123,13 +137,13 @@ const songs = [
   {
     title: "Dunia",
     year: "2026",
-    description: "Add a short description of this song here.",
+    description: "Dunia by Rovince Nyagwang'.",
     cover: "https://i.ibb.co/mCvm1FdS/RN-logo.png",
-    url: "PASTE_YOUTUBE_OR_STREAMING_LINK_HERE",
+    url: "https://www.youtube.com/embed/yGR_ZFg1jLc",
     audio: ""
-  },
- 
+  }
 ];
+
 
 /* ---------------------------------------------------------------------
    1D. CONTACT DETAILS & SOCIAL LINKS
@@ -141,14 +155,14 @@ const songs = [
    location : e.g. "Kisumu, Kenya"
    --------------------------------------------------------------------- */
 const artistLinks = {
-  youtube:   "PASTE_YOUTUBE_CHANNEL_URL_HERE",
-  facebook:  "PASTE_FACEBOOK_URL_HERE",
+  youtube:   "https://www.youtube.com/@rovincenyagwang",
+  facebook:  "https://facebook.com/profile.php?id=100088553083560",
   instagram: "PASTE_INSTAGRAM_URL_HERE",
-  tiktok:    "PASTE_TIKTOK_URL_HERE",
-  whatsapp:  "PASTE_WHATSAPP_NUMBER_HERE",
-  email:     "PASTE_ARTIST_EMAIL_HERE",
-  phone:     "PASTE_ARTIST_PHONE_HERE",
-  location:  "PASTE_LOCATION_HERE"
+  tiktok:    "https://tiktok.com/@rovincenyagwang?_t=ZM-8yZNETLe8IQ&_r=1",
+  whatsapp:  "https://wa.me/254114457043",
+  email:     "rovincenyagwang@gmail.com",
+  phone:     "+254 114 457043",
+  location:  "Homa Bay, Kenya"
 };
 
 /* ---------------------------------------------------------------------
@@ -159,7 +173,7 @@ const artistLinks = {
    WhatsApp or email instead. See README.md, "Connect the booking form".
    --------------------------------------------------------------------- */
 const bookingSettings = {
-  formEndpoint: "PASTE_FORM_ENDPOINT_URL_HERE"
+  formEndpoint: "wa.me/254114457043"
 };
 
 /* =====================================================================
@@ -269,18 +283,174 @@ function icon(name) {
    PART 3: PAGE FEATURES
    ===================================================================== */
 
-/* ---------- Images in fixed places (logo, hero, bio, banner, footer) ---------- */
+
+
+/* ---------- Hero slideshow: slow horizontal sliding ---------- */
+function initHeroSlideshow() {
+  const hero = $(".hero");
+  if (!hero) return;
+
+  // Remove an existing slideshow container before rebuilding.
+  const oldSlideshow = $(".hero-slideshow", hero);
+  if (oldSlideshow) oldSlideshow.remove();
+
+  // Hide the original single hero image.
+  const oldHeroImage = $("#heroImage");
+  if (oldHeroImage) oldHeroImage.hidden = true;
+
+  // Read the configured hero image URLs.
+  const configuredImages = Array.isArray(artistImages.hero)
+    ? artistImages.hero
+    : [artistImages.hero];
+
+  const imageUrls = configuredImages.filter(isUrl);
+
+  if (!imageUrls.length) {
+    console.warn(
+      "[Rovince site] Add at least one valid hero image URL."
+    );
+    return;
+  }
+
+  // Create the slideshow viewport.
+  const slideshow = el("div", {
+    class: "hero-slideshow",
+    "aria-hidden": "true"
+  });
+
+  // Create the horizontal track.
+  const track = el("div", {
+    class: "hero-track"
+  });
+
+  const slides = imageUrls.map((url, index) => {
+    const slide = el("div", {
+      class: "hero-slide"
+    });
+
+    const img = el("img", {
+      class: "hero-slide-image",
+      alt: "",
+      decoding: "async",
+      draggable: "false"
+    });
+
+    img.onerror = () => {
+      slide.dataset.failed = "true";
+      console.warn(
+        "[Rovince site] Hero image failed to load:",
+        url
+      );
+    };
+
+    img.src = url.trim();
+
+    if (index === 0) {
+      img.fetchPriority = "high";
+    } else {
+      img.loading = "eager";
+    }
+
+    slide.append(img);
+    track.append(slide);
+
+    return slide;
+  });
+
+  slideshow.append(track);
+  hero.prepend(slideshow);
+
+  // Set the initial slide.
+  let currentIndex = 0;
+  let timer = null;
+
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  );
+
+  // Adjust the track position to show the selected image.
+  function moveToSlide(index, animate = true) {
+    track.style.transition = animate
+      ? "transform 2.2s cubic-bezier(0.22, 0.61, 0.36, 1)"
+      : "none";
+
+    track.style.transform =
+      "translate3d(-" + (index * 100) + "%, 0, 0)";
+  }
+
+  function showNextImage() {
+    // Find the next image that loaded successfully.
+    let nextIndex = currentIndex;
+    let found = false;
+
+    for (let count = 0; count < slides.length; count++) {
+      nextIndex = (nextIndex + 1) % slides.length;
+
+      if (slides[nextIndex].dataset.failed !== "true") {
+        found = true;
+        break;
+      }
+    }
+
+    if (!found) return;
+
+    currentIndex = nextIndex;
+
+    // If we reach the last slide, return smoothly to the first.
+    if (currentIndex === 0) {
+      track.style.transition =
+        "transform 2.2s cubic-bezier(0.22, 0.61, 0.36, 1)";
+      track.style.transform = "translate3d(0, 0, 0)";
+    } else {
+      moveToSlide(currentIndex, true);
+    }
+  }
+
+  function startSlideshow() {
+    if (timer !== null) {
+      window.clearInterval(timer);
+      timer = null;
+    }
+
+    // Start from the first slide when reduced motion is enabled.
+    if (reducedMotion.matches || slides.length < 2) {
+      currentIndex = 0;
+      moveToSlide(0, false);
+      return;
+    }
+
+    // Display each image for 9 seconds before changing.
+    // The actual slide movement takes 2.2 seconds.
+    moveToSlide(currentIndex, false);
+
+    timer = window.setInterval(showNextImage, 9000);
+  }
+
+  startSlideshow();
+
+  if (reducedMotion.addEventListener) {
+    reducedMotion.addEventListener("change", startSlideshow);
+  } else if (reducedMotion.addListener) {
+    reducedMotion.addListener(startSlideshow);
+  }
+}
+
+
+/* ---------- Images in fixed places: logo, biography and footer ---------- */
 function initStaticImages() {
   const logo = $("#brandLogo");
+
   if (logo && !isPlaceholder(artistImages.logo)) {
     applyImage(logo, artistImages.logo, "Logo");
     logo.hidden = false;
   }
-  applyImage($("#heroImage"), artistImages.hero, "Add hero photo");
+
+  // The hero image is now managed by initHeroSlideshow().
   applyImage($("#bioImage"), artistImages.biography, "Add biography photo");
   applyBackground($("#heroBanner"), artistImages.header);
   applyBackground($("#footerBg"), artistImages.footer);
 }
+
 
 /* ---------- Social icon rows (hero, contact, footer) ---------- */
 function initSocial() {
@@ -322,41 +492,138 @@ function initBio() {
   });
 }
 
-/* ---------- Songs ---------- */
+
+/* ---------- Songs: play directly on the website ---------- */
+
+let stopActiveSong = null;
+
+function getYouTubeId(url) {
+  if (isYouTubeId(url)) return url.trim();
+  if (!isUrl(url)) return "";
+
+  try {
+    const parsed = new URL(url.trim());
+    const host = parsed.hostname.replace(/^www\./, "").toLowerCase();
+    let id = "";
+
+    if (host === "youtu.be") {
+      id = parsed.pathname.split("/").filter(Boolean)[0] || "";
+    } else if (
+      host === "youtube.com" ||
+      host === "m.youtube.com" ||
+      host === "youtube-nocookie.com"
+    ) {
+      id = parsed.searchParams.get("v") || "";
+
+      if (!id) {
+        const match = parsed.pathname.match(
+          /^\/(?:embed|shorts|live)\/([A-Za-z0-9_-]{11})/
+        );
+        if (match) id = match[1];
+      }
+    }
+
+    return isYouTubeId(id) ? id : "";
+  } catch {
+    return "";
+  }
+}
+
 function renderSongs() {
   const grid = $("#songGrid");
   if (!grid) return;
+
   grid.replaceChildren();
 
   songs.forEach(song => {
-    const cover = el("img", { alt: (song.title || "Song") + " cover art", loading: "lazy", decoding: "async", width: "600", height: "600" });
-    applyImage(cover, song.cover, "Cover art coming soon");
+    const videoId = getYouTubeId(song.url);
+    const audioUrl = isUrl(song.audio) ? song.audio.trim() : "";
 
-    const actions = el("div", { class: "card-actions" });
-    if (isUrl(song.url)) {
-      actions.append(el("a", {
-        class: "btn btn-gold btn-small", href: song.url.trim(), target: "_blank", rel: "noopener noreferrer",
-        "aria-label": "Listen now to " + song.title + " (opens in a new tab)", text: "Listen Now"
-      }));
-    } else {
-      actions.append(el("span", {
-        class: "btn btn-small is-disabled", "aria-disabled": "true", title: "Add this song's link in script.js", text: "Listen Now"
-      }));
-    }
+    // Song cover and embedded player share the same media area.
+    const media = el("div", { class: "card-media song-media" });
 
+    const cover = el("img", {
+      alt: (song.title || "Song") + " cover art",
+      loading: "lazy",
+      decoding: "async",
+      width: "600",
+      height: "600"
+    });
+
+    applyImage(cover, song.cover, "Song cover coming soon");
+    media.append(cover);
+
+    // Native audio is preferred when a direct MP3 URL is supplied.
     const body = el("div", { class: "card-body" }, [
       el("h3", { text: song.title }),
       el("p", { class: "card-meta", text: song.year }),
       el("p", { class: "card-desc", text: song.description })
     ]);
-    if (song.audio && isUrl(song.audio)) {
-      body.append(el("audio", { controls: true, preload: "none", src: song.audio.trim(), "aria-label": "Audio player for " + song.title }));
-    }
-    body.append(actions);
 
-    grid.append(el("article", { class: "card song-card" }, [el("div", { class: "card-media" }, cover), body]));
+    if (audioUrl) {
+      body.append(el("audio", {
+        controls: true,
+        preload: "none",
+        src: audioUrl,
+        "aria-label": "Listen to " + song.title
+      }));
+    }
+
+    // Play YouTube inside the website, without opening another tab.
+    if (videoId) {
+      const playBtn = el("button", {
+        class: "video-play song-play",
+        type: "button",
+        "aria-label": "Play " + song.title + " on this website",
+        html: '<span class="play-disc">' + icon("play") + "</span>"
+      });
+
+      media.append(playBtn);
+
+      playBtn.addEventListener("click", () => {
+        if (stopActiveSong) stopActiveSong();
+
+        const frame = el("iframe", {
+          src: "https://www.youtube-nocookie.com/embed/" +
+            videoId + "?autoplay=1&rel=0",
+          title: "Listen to " + song.title,
+          loading: "lazy",
+          allow: "accelerometer; autoplay; clipboard-write; " +
+            "encrypted-media; gyroscope; picture-in-picture; web-share",
+          allowfullscreen: true,
+          referrerpolicy: "strict-origin-when-cross-origin"
+        });
+
+        media.replaceChildren(frame);
+
+        stopActiveSong = () => {
+          media.replaceChildren(cover, playBtn);
+          stopActiveSong = null;
+        };
+      });
+    } else if (!audioUrl) {
+      media.append(el("span", {
+        class: "video-soon",
+        text: "Song coming soon"
+      }));
+    }
+
+    // No external YouTube link: playback stays on the website.
+    if (!videoId && !audioUrl) {
+      body.append(el("p", {
+        class: "card-desc",
+        text: "Audio or video link coming soon."
+      }));
+    }
+
+    grid.append(
+      el("article", {
+        class: "card song-card"
+      }, [media, body])
+    );
   });
 }
+
 
 /* ---------- Videos ---------- */
 let stopActiveVideo = null;   // lets only one embedded video play at a time
@@ -829,8 +1096,10 @@ function initYear() {
 }
 
 /* ---------- Start everything ---------- */
+
 function init() {
   initStaticImages();
+  initHeroSlideshow();
   initSocial();
   initBio();
   renderSongs();
@@ -843,3 +1112,4 @@ function init() {
   initYear();
 }
 init();
+
