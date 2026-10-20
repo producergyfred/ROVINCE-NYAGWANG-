@@ -177,69 +177,425 @@ h1, h2, h3, p { margin-top: 0; }
   .nav-book { width: 100%; }
 }
 
-/* ---------- 5. HERO ---------- */
+/* =========================================================
+   ROVINCE NYAGWANG — FULL-WIDTH HERO SLIDESHOW
+   Six images | Centered text | No black side spaces
+   ========================================================= */
+
 .hero {
-  position: relative; isolation: isolate;
-  display: flex; align-items: center;
-  min-height: calc(100vh - var(--header-h));
-  min-height: calc(100svh - var(--header-h));
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: calc(100vh - var(--header-h, 80px));
+  min-height: calc(100svh - var(--header-h, 80px));
   overflow: hidden;
-  background: radial-gradient(ellipse at 20% 30%, rgba(212, 175, 55, 0.14), transparent 55%), var(--black);
-}
-.hero-banner {
-  position: absolute; inset: 0; z-index: -3;
-  background-size: cover; background-position: center; opacity: 0.28;
-}
-.hero-photo {
-  position: absolute; z-index: -2; top: 0; right: 0;
-  width: 62%; height: 100%;
-  object-fit: cover; object-position: center 20%;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 38%);
-  mask-image: linear-gradient(to right, transparent 0%, #000 38%);
-}
-.hero-shade {
-  position: absolute; inset: 0; z-index: -1;
-  background:
-    linear-gradient(90deg, rgba(8, 8, 8, 0.92) 0%, rgba(8, 8, 8, 0.5) 45%, rgba(8, 8, 8, 0.1) 100%),
-    linear-gradient(0deg, var(--black) 0%, transparent 22%);
+  background: #080808;
+  text-align: center;
 }
 
-.hero-content { padding-block: 4rem; }
-.hero h1 {
-  margin-bottom: 1rem;
-  font-family: var(--font-display); font-weight: 600;
-  font-size: clamp(3.4rem, 10vw, 8rem); line-height: 0.92; letter-spacing: -0.01em;
+/* =====================================================
+   HERO SLIDESHOW — HORIZONTAL SWIPE ANIMATION
+   ===================================================== */
+
+/* ==========================================================
+   ROVINCE NYAGWANG — SLOW, SMOOTH HERO IMAGE SLIDESHOW
+   Six images | Full width | Horizontal sliding animation
+   ========================================================== */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: calc(100vh - var(--header-h, 80px));
+  min-height: calc(100svh - var(--header-h, 80px));
+  overflow: hidden;
+  background: #080808;
+  text-align: center;
 }
-.hero h1 span { display: block; }
+
+/* Full-screen image container */
+.hero-slideshow {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #080808;
+}
+
+/* Each image fills the hero without side gaps */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center center;
+  transform: translateX(100%);
+  opacity: 1;
+  transition: transform 2.5s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+  border: 0;
+  will-change: transform;
+}
+
+/* Image currently on screen */
+.hero-slide.is-active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Previous image slides out to the left */
+.hero-slide.is-leaving {
+  transform: translateX(-100%);
+  opacity: 1;
+}
+
+/* Hide old single-image hero elements */
+.hero-banner,
+.hero-shade,
+.hero > #heroImage {
+  display: none !important;
+}
+
+/* Dark overlay for readable text */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.28),
+    rgba(0, 0, 0, 0.48),
+    rgba(0, 0, 0, 0.30)
+  );
+  pointer-events: none;
+}
+
+/* Centered hero writing and buttons */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 24px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  width: 100%;
+  margin: 0 0 18px;
+  color: #FFD700;
+  font-size: clamp(2.8rem, 6vw, 5.8rem);
+  font-weight: 900;
+  line-height: 1.08;
+  text-align: center;
+  -webkit-text-stroke: 0.6px #000;
+  text-shadow: 2px 3px 0 #000, 0 0 20px #000;
+}
+
+.hero-content h1 span {
+  display: inline;
+}
+
 .hero-sub {
-  margin-bottom: 1.2rem;
-  font-size: clamp(1.05rem, 2.4vw, 1.35rem); font-weight: 500;
-  color: var(--gold);
+  max-width: 850px;
+  margin: 0 0 16px;
+  color: #FFD700;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-weight: 800;
+  line-height: 1.5;
+  text-align: center;
+  text-shadow: 1px 2px 0 #000, 0 2px 12px #000;
 }
-.hero-msg { max-width: 34rem; margin-bottom: 2rem; font-size: 1.15rem; color: #EDE9DD; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-bottom: 2rem; }
 
-/* One short entrance when the page loads */
-.hero-content > * { animation: rise 0.8s var(--ease) both; }
-.hero-content > :nth-child(2) { animation-delay: 0.1s; }
-.hero-content > :nth-child(3) { animation-delay: 0.2s; }
-.hero-content > :nth-child(4) { animation-delay: 0.3s; }
-.hero-content > :nth-child(5) { animation-delay: 0.4s; }
-@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+.hero-msg {
+  max-width: 760px;
+  margin: 0 auto 26px;
+  color: #fff;
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  font-weight: 700;
+  line-height: 1.8;
+  text-align: center;
+  text-shadow: 1px 2px 0 #000, 0 2px 12px #000;
+}
 
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.hero-actions .btn {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.hero .social-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Mobile screens */
 @media (max-width: 760px) {
-  .hero { align-items: flex-end; min-height: 92vh; min-height: 92svh; }
-  .hero-photo {
-    width: 100%; object-position: center top;
-    -webkit-mask-image: none; mask-image: none;
+  .hero {
+    min-height: 92vh;
+    min-height: 92svh;
   }
-  .hero-shade {
-    background: linear-gradient(180deg, rgba(8, 8, 8, 0.3) 0%, rgba(8, 8, 8, 0.55) 35%, rgba(8, 8, 8, 0.94) 72%, var(--black) 100%);
+
+  .hero-content {
+    padding: 48px 20px;
   }
-  .hero-content { padding-block: 2rem 3rem; }
-  .hero h1 span { display: inline; }
-  .hero-actions .btn { flex: 1 1 100%; }
+
+  .hero-content h1 {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+
+  .hero-content h1 span {
+    display: block;
+  }
+
+  .hero-sub {
+    font-size: 1.15rem;
+  }
+
+  .hero-msg {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .hero-actions .btn {
+    flex: 1 1 100%;
+    max-width: 320px;
+  }
 }
+
+/* Small phones */
+@media (max-width: 380px) {
+  .hero-content {
+    padding: 36px 14px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.25rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide {
+    transition: none;
+  }
+}
+
+/* =====================================================
+   ROVINCE NYAGWANG — SLOW HERO IMAGE SLIDER
+   Add this at the VERY BOTTOM of your CSS file.
+   ===================================================== */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: #080808;
+}
+
+.hero-slideshow {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #080808;
+}
+
+.hero-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+.hero-slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 1;
+}
+
+
+/* Show the complete image without cropping */
+.hero-slide-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  object-position: center center;
+  background: #080808;
+  user-select: none;
+  pointer-events: none;
+}
+
+
+/* Keep all hero text and buttons above the images. */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Mobile adjustments */
+@media (max-width: 760px) {
+  .hero {
+    min-height: 92vh;
+    min-height: 92svh;
+  }
+
+  .hero-slideshow,
+  .hero-track,
+  .hero-slide {
+    height: 100%;
+  }
+
+  .hero-slide-image {
+    object-position: center center;
+  }
+}
+
+/* Respect visitors who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  .hero-track {
+    transition: none !important;
+  }
+}
+
+/* =====================================================
+   HERO IMAGE FIX — FULL WIDTH, NO SIDE GAPS
+   ===================================================== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - var(--header-h, 80px));
+  min-height: calc(100svh - var(--header-h, 80px));
+  overflow: hidden;
+  isolation: isolate;
+  background: #080808;
+}
+
+/* Full-size slideshow background */
+.hero-slideshow {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #080808;
+}
+
+/* Horizontal sliding track */
+.hero-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+/* Each slide occupies the full viewport width */
+.hero-slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/* Images fill the slide without empty side spaces */
+.hero-slide-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center center;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: #080808;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Keep the hero text above the slideshow */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Mobile screens */
+@media (max-width: 760px) {
+  .hero {
+    min-height: 92vh;
+    min-height: 92svh;
+  }
+
+  .hero-slideshow,
+  .hero-track,
+  .hero-slide {
+    height: 100%;
+  }
+
+  .hero-slide-image {
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .hero-track {
+    transition: none !important;
+  }
+}
+
+
 
 /* ---------- 6. SECTIONS (shared) ---------- */
 .section { padding-block: clamp(4rem, 9vw, 7rem); }
@@ -517,3 +873,116 @@ a.icon-link:hover { background: var(--gold); color: var(--black); border-color: 
   }
   .card:hover, .card:focus-within { transform: none; }
 }
+
+/* Embedded music player */
+.song-media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #111;
+}
+
+.song-media > img,
+.song-media > iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0;
+}
+
+.song-media > .song-play {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+  display: grid;
+  place-items: center;
+}
+
+.song-media > .song-play .play-disc {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #d4af37;
+  color: #111;
+}
+
+.song-media > .song-play svg {
+  width: 28px;
+  height: 28px;
+}
+
+.song-card audio {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+}
+
+/* =====================================================
+   ABOUT & GALLERY IMAGE FIX
+   Show complete images without cropping the top or bottom
+   ===================================================== */
+
+/* ABOUT SECTION */
+.about-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center center;
+}
+
+/* GALLERY SECTION */
+.g-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #121212;
+}
+
+.g-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  transition: transform 0.6s var(--ease);
+}
+
+/* Keep gallery hover effects from cropping images */
+.g-item:hover img,
+.g-item:focus-visible img {
+  transform: scale(1.02);
+}
+
+/* LIGHTBOX: show the full image */
+.lb-figure img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 92vw;
+  max-height: 78dvh;
+  object-fit: contain;
+  object-position: center center;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .about-photo img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+  }
+
+  .g-item img {
+    object-fit: contain;
+  }
+}
+
